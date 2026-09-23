@@ -1,0 +1,16 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F3FAFF"/>
+  <rect x="120" y="94" width="960" height="442" rx="44" fill="url(#g)"/>
+  <circle cx="884" cy="181" r="94" fill="white" fill-opacity=".15"/>
+  <circle cx="232" cy="454" r="128" fill="white" fill-opacity=".13"/>
+  <text x="164" y="239" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="white">Cartão Wally</text>
+  <text x="166" y="326" font-family="Arial, sans-serif" font-size="40" font-weight="600" fill="white">Divulgue seus serviços com uma arte profissional</text>
+  <rect x="166" y="382" width="270" height="66" rx="33" fill="white"/>
+  <text x="205" y="426" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#0D63F3">Criar meu cartão</text>
+  <defs>
+    <linearGradient id="g" x1="120" y1="94" x2="1068" y2="543" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D63F3"/>
+      <stop offset="1" stop-color="#10BFE8"/>
+    </linearGradient>
+  </defs>
+</svg>
