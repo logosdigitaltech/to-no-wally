@@ -3,9 +3,10 @@ import "@fontsource/grandstander/400.css";
 import "@fontsource/grandstander/600.css";
 import "@fontsource/grandstander/700.css";
 import "@fontsource/grandstander/800.css";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://to-no-wally.vercel.app";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
