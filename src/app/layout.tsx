@@ -5,7 +5,7 @@ import "@fontsource/grandstander/700.css";
 import "@fontsource/grandstander/800.css";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cartao-wally.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://to-no-wally.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
