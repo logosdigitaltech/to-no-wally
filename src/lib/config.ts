@@ -4,35 +4,7 @@ export const WALLY_DOWNLOAD_URL =
 export const MAX_PHOTO_MB = Number(process.env.NEXT_PUBLIC_MAX_PHOTO_MB || 5);
 export const MAX_PHOTO_BYTES = MAX_PHOTO_MB * 1024 * 1024;
 
-export const BR_STATES = [
-  "AC",
-  "AL",
-  "AP",
-  "AM",
-  "BA",
-  "CE",
-  "DF",
-  "ES",
-  "GO",
-  "MA",
-  "MT",
-  "MS",
-  "MG",
-  "PA",
-  "PB",
-  "PR",
-  "PE",
-  "PI",
-  "RJ",
-  "RN",
-  "RS",
-  "RO",
-  "RR",
-  "SC",
-  "SP",
-  "SE",
-  "TO",
-] as const;
+export const BR_STATES = ["MG"] as const;
 
 export const gradients = {
   ocean: {

@@ -168,7 +168,7 @@ function Artwork({
             className={`${isStory ? "mt-7 text-[22px]" : "mt-6 text-[17px]"} font-bold leading-tight text-[var(--wally-muted)]`}
             style={{ ...clampStyle(2), overflowWrap: "anywhere" }}
           >
-            Atendo {values.region || "na sua região"}
+            Atendo {values.region.filter(Boolean).join(", ") || "na sua região"}
           </p>
 
           <div

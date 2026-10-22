@@ -10,7 +10,7 @@ const sample = {
   state: "MG" as const,
   bio: "Atendimento rápido para instalações, manutenção e reparos elétricos com cuidado e segurança.",
   services: ["Instalações", "Manutenção", "Chuveiros"],
-  region: "Campinas e região",
+  region: ["Campinas e região"],
 };
 
 export function Hero() {

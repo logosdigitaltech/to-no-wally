@@ -8,7 +8,7 @@ const valid = {
   city: "Campinas",
   bio: "Eletricista residencial com experiência em instalações, manutenção e reparos elétricos.",
   services: ["Instalações elétricas", "Troca de tomadas"],
-  region: "Campinas e região",
+  region: ["Campinas e região"],
 };
 
 describe("cardSchema", () => {
@@ -31,7 +31,7 @@ describe("cardSchema", () => {
         services: ["Serviço 1", "Serviço 2", "Serviço 3", "Serviço 4"],
       }).success,
     ).toBe(true);
-    expect(cardSchema.safeParse({ ...valid, region: "R".repeat(61) }).success).toBe(false);
+    expect(cardSchema.safeParse({ ...valid, region: ["R".repeat(41)] }).success).toBe(false);
   });
 
   it("valida contagem de caracteres da bio", () => {

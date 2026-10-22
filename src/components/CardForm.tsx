@@ -13,6 +13,7 @@ import { CardPreview } from "./CardPreview";
 import { FormProgress } from "./FormProgress";
 import { PhotoUploader } from "./PhotoUploader";
 import { ServicesInput } from "./ServicesInput";
+import { RegionsInput } from "./RegionsInput";
 import { ShareActions } from "./ShareActions";
 import { Toast } from "./Toast";
 
@@ -229,12 +230,16 @@ export function CardForm() {
                         />
                       )}
                     />
-                    <Input
-                      label="Região atendida (máximo 60 caracteres)"
-                      maxLength={60}
-                      value={values.region}
-                      error={fieldError("region")}
-                      {...form.register("region")}
+                    <Controller
+                      control={form.control}
+                      name="region"
+                      render={({ field }) => (
+                        <RegionsInput
+                          regions={field.value}
+                          onChange={field.onChange}
+                          error={fieldError("region")}
+                        />
+                      )}
                     />
                   </div>
                 )}

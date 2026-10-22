@@ -37,10 +37,9 @@ export const cardSchema = z.object({
     .min(1, "Informe pelo menos um serviço.")
     .max(4, "Informe no máximo quatro serviços."),
   region: z
-    .string()
-    .trim()
-    .min(2, "Informe a região atendida.")
-    .max(60, "A região atendida pode ter no máximo 60 caracteres."),
+    .array(z.string().trim().min(2, "Informe uma região atendida.").max(40, "Cada região pode ter no máximo 40 caracteres."))
+    .min(1, "Informe pelo menos uma região atendida.")
+    .max(4, "Informe no máximo quatro regiões atendidas."),
   layout: z.enum(["modern", "classic"]),
   gradient: z.enum([
     "ocean",
@@ -67,13 +66,13 @@ export const defaultValues: CardFormValues = {
   name: "",
   profession: "",
   city: "",
-  state: "SP",
+  state: "MG",
   photoDataUrl: undefined,
   photoName: undefined,
   photoSize: undefined,
   bio: "",
   services: [""],
-  region: "",
+  region: [""],
   layout: "modern",
   gradient: "ocean",
   showCity: true,

@@ -11,7 +11,7 @@ const values = {
   city: "Campinas",
   bio: "Eletricista residencial com experiência em instalações, manutenção e reparos elétricos.",
   services: ["Instalações"],
-  region: "Campinas",
+  region: ["Campinas"],
 };
 
 describe("CardPreview", () => {
