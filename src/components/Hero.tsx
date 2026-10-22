@@ -1,17 +1,4 @@
-import { ArrowDown, Check, Sparkles } from "lucide-react";
-import { CardPreview } from "./CardPreview";
-import { defaultValues } from "@/lib/schema";
-
-const sample = {
-  ...defaultValues,
-  name: "Maria Silva",
-  profession: "Eletricista residencial",
-  city: "Campinas",
-  state: "SP" as const,
-  bio: "Atendimento rápido para instalações, manutenção e reparos elétricos com cuidado e segurança.",
-  services: ["Instalações", "Manutenção", "Chuveiros"],
-  region: "Campinas e região",
-};
+import { ArrowDown, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -41,13 +28,21 @@ export function Hero() {
             </span>
           </div>
         </div>
-        <div className="hero-preview relative z-10 mx-auto flex w-full max-w-[330px] flex-col gap-4" aria-hidden>
-          <div className="hero-preview-intro">
-            <span className="hero-preview-kicker"><Check size={14} strokeWidth={3} /> Pronto para compartilhar</span>
-            <p>Seu perfil em uma arte que chama atenção.</p>
-            <span className="hero-preview-formats">Stories <i /> Feed <i /> Wally</span>
+        <div className="hero-impact relative z-10 mx-auto w-full max-w-[470px]" aria-hidden>
+          <div className="hero-impact-topline">
+            <span>WALLY / CRIADORES</span>
+            <span>01 / 03</span>
           </div>
-          <CardPreview values={sample} previewFormat="story" />
+          <div className="hero-impact-wordmark font-display">WALLY</div>
+          <div className="hero-impact-copy">
+            <span className="hero-impact-kicker">Seu trabalho em movimento</span>
+            <p>Um perfil. Duas formas de aparecer.</p>
+          </div>
+          <div className="hero-impact-rail">
+            <span><b>01</b> Perfil</span>
+            <span><b>02</b> Stories</span>
+            <span><b>03</b> Feed</span>
+          </div>
         </div>
       </div>
     </section>
