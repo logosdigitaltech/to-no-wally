@@ -42,7 +42,17 @@ export const cardSchema = z.object({
     .min(2, "Informe a região atendida.")
     .max(60, "A região atendida pode ter no máximo 60 caracteres."),
   layout: z.enum(["modern", "classic"]),
-  gradient: z.enum(["ocean", "deep", "bright", "dark", "orange"]),
+  gradient: z.enum([
+    "ocean",
+    "deep",
+    "bright",
+    "dark",
+    "orange",
+    "sunset",
+    "sky",
+    "electric",
+    "midnight",
+  ]),
   showCity: z.boolean(),
   showQr: z.boolean(),
   photoZoom: z.number().min(1).max(2),
