@@ -95,7 +95,7 @@ function Artwork({
       <BrandRow isStory={isStory} />
 
       <div
-        className={`absolute overflow-hidden border-[6px] border-white/80 bg-cyan-100 shadow-2xl ${classic ? "rounded-[34px]" : "rounded-[72px]"}`}
+        className={`absolute overflow-hidden border-[6px] border-white/80 bg-cyan-100 shadow-2xl ${classic ? "rounded-none" : "rounded-[72px]"}`}
         style={
           isStory
             ? { left: 64, right: 64, top: 180, height: 675 }
@@ -113,7 +113,7 @@ function Artwork({
       </div>
 
       <section
-        className={`absolute z-10 border border-white/50 bg-white/[.88] text-[var(--wally-ink)] shadow-2xl backdrop-blur-xl ${classic ? "rounded-[34px]" : "rounded-[64px]"}`}
+        className={`absolute z-10 border border-white/50 bg-white/[.88] text-[var(--wally-ink)] shadow-2xl backdrop-blur-xl ${classic ? "rounded-none" : "rounded-[64px]"}`}
         style={
           isStory
             ? { left: 64, right: 64, top: 800, bottom: 62, padding: "72px 58px 42px" }
