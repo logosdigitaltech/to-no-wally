@@ -1,4 +1,17 @@
 import { ArrowDown, Sparkles } from "lucide-react";
+import { CardPreview } from "./CardPreview";
+import { defaultValues } from "@/lib/schema";
+
+const sample = {
+  ...defaultValues,
+  name: "Maria Silva",
+  profession: "Eletricista residencial",
+  city: "Campinas",
+  state: "SP" as const,
+  bio: "Atendimento rápido para instalações, manutenção e reparos elétricos com cuidado e segurança.",
+  services: ["Instalações", "Manutenção", "Chuveiros"],
+  region: "Campinas e região",
+};
 
 export function Hero() {
   return (
@@ -28,20 +41,12 @@ export function Hero() {
             </span>
           </div>
         </div>
-        <div className="hero-impact relative z-10 mx-auto w-full max-w-[470px]" aria-hidden>
-          <div className="hero-impact-topline">
-            <span>WALLY / CRIADORES</span>
-            <span>01 / 03</span>
-          </div>
-          <div className="hero-impact-wordmark font-display">WALLY</div>
-          <div className="hero-impact-copy">
-            <span className="hero-impact-kicker">Seu trabalho em movimento</span>
-            <p>Um perfil. Duas formas de aparecer.</p>
-          </div>
-          <div className="hero-impact-rail">
-            <span><b>01</b> Perfil</span>
-            <span><b>02</b> Stories</span>
-            <span><b>03</b> Feed</span>
+        <div className="hero-lanyard relative z-10 mx-auto w-full max-w-[390px]" aria-hidden>
+          <div className="lanyard-anchor" />
+          <div className="lanyard-strap"><span>WALLY</span></div>
+          <div className="lanyard-clamp" />
+          <div className="lanyard-card">
+            <CardPreview values={sample} previewFormat="story" />
           </div>
         </div>
       </div>
