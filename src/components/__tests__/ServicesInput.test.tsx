@@ -5,8 +5,8 @@ import { describe, expect, it, vi } from "vitest";
 import { ServicesInput } from "../ServicesInput";
 
 describe("ServicesInput", () => {
-  it("bloqueia adição ao chegar em quatro serviços", () => {
-    render(<ServicesInput services={["1", "2", "3", "4"]} onChange={vi.fn()} />);
+  it("bloqueia adição ao chegar em oito serviços", () => {
+    render(<ServicesInput services={["1", "2", "3", "4", "5", "6", "7", "8"]} onChange={vi.fn()} />);
     expect(screen.getByRole("button", { name: /adicionar serviço/i })).toBeDisabled();
   });
 

@@ -35,11 +35,11 @@ export const cardSchema = z.object({
   services: z
     .array(serviceSchema)
     .min(1, "Informe pelo menos um serviço.")
-    .max(4, "Informe no máximo quatro serviços."),
+    .max(8, "Informe no máximo oito serviços."),
   region: z
     .array(z.string().trim().min(2, "Informe uma região atendida.").max(40, "Cada região pode ter no máximo 40 caracteres."))
     .min(1, "Informe pelo menos uma região atendida.")
-    .max(4, "Informe no máximo quatro regiões atendidas."),
+    .max(8, "Informe no máximo oito regiões atendidas."),
   layout: z.enum(["modern", "classic"]),
   gradient: z.enum([
     "ocean",

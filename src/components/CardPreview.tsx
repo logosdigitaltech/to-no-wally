@@ -65,7 +65,7 @@ function Artwork({
 }) {
   const isStory = format === "story";
   const gradient = gradients[values.gradient];
-  const services = values.services.filter(Boolean).slice(0, 4);
+  const services = values.services.filter(Boolean).slice(0, 8);
   const cityText = values.showCity
     ? `${values.city || "Sua cidade"} · ${values.state}`
     : values.state;
@@ -169,6 +169,13 @@ function Artwork({
             style={{ ...clampStyle(2), overflowWrap: "anywhere" }}
           >
             Atendo {values.region.filter(Boolean).join(", ") || "na sua região"}
+          </p>
+
+          <p
+            className={`${isStory ? "mt-6 text-[25px]" : "mt-5 text-[18px]"} font-display font-extrabold leading-tight text-[var(--wally-blue)]`}
+            style={{ ...clampStyle(2), overflowWrap: "anywhere" }}
+          >
+            Descubra mais no Wally.
           </p>
 
           <div

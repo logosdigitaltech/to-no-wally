@@ -17,9 +17,9 @@ export function RegionsInput({
     <div className="space-y-3">
       <div className="flex items-center justify-between gap-3">
         <label className="text-sm font-bold text-[var(--wally-blue-dark)]">
-          Regiões atendidas <span className="font-normal text-[var(--wally-muted)]">(máximo 4)</span>
+          Regiões atendidas <span className="font-normal text-[var(--wally-muted)]">(máximo 8)</span>
         </label>
-        <span className="text-xs font-bold text-[var(--wally-muted)]">{list.length}/4</span>
+        <span className="text-xs font-bold text-[var(--wally-muted)]">{list.length}/8</span>
       </div>
       <div className="space-y-2">
         {list.map((region, index) => (
@@ -51,7 +51,7 @@ export function RegionsInput({
       <button
         type="button"
         className="btn-secondary w-full"
-        disabled={list.length >= 4}
+        disabled={list.length >= 8}
         onClick={() => onChange([...list, ""])}
       >
         <Plus size={18} aria-hidden /> Adicionar região

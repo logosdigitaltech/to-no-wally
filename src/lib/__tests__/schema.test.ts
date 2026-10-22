@@ -16,19 +16,19 @@ describe("cardSchema", () => {
     expect(cardSchema.safeParse(valid).success).toBe(true);
   });
 
-  it("limita a lista a quatro serviços", () => {
+  it("limita a lista a oito serviços", () => {
     const result = cardSchema.safeParse({
       ...valid,
-      services: ["Serviço 1", "Serviço 2", "Serviço 3", "Serviço 4", "Serviço 5"],
+      services: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
     });
     expect(result.success).toBe(false);
   });
 
-  it("aceita até quatro serviços e limita a região", () => {
+  it("aceita até oito serviços e limita a região", () => {
     expect(
       cardSchema.safeParse({
         ...valid,
-        services: ["Serviço 1", "Serviço 2", "Serviço 3", "Serviço 4"],
+        services: ["aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh"],
       }).success,
     ).toBe(true);
     expect(cardSchema.safeParse({ ...valid, region: ["R".repeat(41)] }).success).toBe(false);
