@@ -138,6 +138,52 @@ textarea:focus-visible {
   animation: float-preview 5s ease-in-out infinite;
 }
 
+.hero-preview-intro {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 14px 16px 13px;
+  color: white;
+  background: rgba(8, 43, 104, 0.24);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 28px rgba(8, 43, 104, 0.16);
+}
+
+.hero-preview-kicker,
+.hero-preview-formats {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-preview-kicker {
+  color: #fff;
+}
+
+.hero-preview-intro p {
+  margin: 5px 0 8px;
+  font-family: "Grandstander", ui-rounded, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.hero-preview-formats {
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.04em;
+}
+
+.hero-preview-formats i {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--wally-orange);
+}
+
 .sticker {
   display: inline-flex;
   align-items: center;
@@ -345,33 +391,17 @@ textarea:focus-visible {
     transform-origin: top center;
   }
 
-  .hero-preview .sticker {
-    gap: 5px;
-    border-radius: 10px;
-    padding: 7px 9px;
-    font-size: 0.68rem;
-    box-shadow: 3px 4px 0 rgba(8, 43, 104, 0.24);
-  }
-
-  .hero-preview .sticker svg {
-    width: 13px;
-    height: 13px;
-  }
-
   .hero-preview .card-preview-responsive {
     --card-scale: 0.15 !important;
   }
 
-  .sticker-orange {
-    left: 50%;
-    right: auto;
-    top: 4px;
-    transform: translateX(-36%);
+  .hero-preview-intro {
+    border-radius: 14px;
+    padding: 11px 13px 10px;
   }
 
-  .sticker-cyan {
-    left: 8px;
-    bottom: 82px;
+  .hero-preview-intro p {
+    font-size: 0.98rem;
   }
 }
 

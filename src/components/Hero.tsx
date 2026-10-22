@@ -1,4 +1,4 @@
-import { ArrowDown, Sparkles, Star, Zap } from "lucide-react";
+import { ArrowDown, Check, Sparkles } from "lucide-react";
 import { CardPreview } from "./CardPreview";
 import { defaultValues } from "@/lib/schema";
 
@@ -41,13 +41,12 @@ export function Hero() {
             </span>
           </div>
         </div>
-        <div className="hero-preview relative z-10 mx-auto w-full max-w-[330px]" aria-hidden>
-          <span className="sticker sticker-orange absolute -right-4 top-16 z-20 rotate-[7deg]">
-            <Zap size={18} fill="currentColor" /> Vem orçamento
-          </span>
-          <span className="sticker sticker-cyan absolute -left-8 bottom-28 z-20 rotate-[-8deg]">
-            <Star size={18} fill="currentColor" /> Encontre meu perfil
-          </span>
+        <div className="hero-preview relative z-10 mx-auto flex w-full max-w-[330px] flex-col gap-4" aria-hidden>
+          <div className="hero-preview-intro">
+            <span className="hero-preview-kicker"><Check size={14} strokeWidth={3} /> Pronto para compartilhar</span>
+            <p>Seu perfil em uma arte que chama atenção.</p>
+            <span className="hero-preview-formats">Stories <i /> Feed <i /> Wally</span>
+          </div>
           <CardPreview values={sample} previewFormat="story" />
         </div>
       </div>
