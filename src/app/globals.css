@@ -480,11 +480,11 @@ textarea:focus-visible {
   }
 
   .hero-lanyard {
-    min-height: 430px;
+    min-height: 620px;
     padding-top: 0;
     transform: scale(0.78);
     transform-origin: top center;
-    margin-bottom: -90px;
+    margin-bottom: 0;
   }
 }
 
