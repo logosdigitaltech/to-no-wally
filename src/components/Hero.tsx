@@ -4,10 +4,10 @@ import { defaultValues } from "@/lib/schema";
 
 const sample = {
   ...defaultValues,
-  name: "Maria Silva",
+  name: "João Silva",
   profession: "Eletricista residencial",
-  city: "Campinas",
-  state: "SP" as const,
+  city: "São João Del Rei",
+  state: "MG" as const,
   bio: "Atendimento rápido para instalações, manutenção e reparos elétricos com cuidado e segurança.",
   services: ["Instalações", "Manutenção", "Chuveiros"],
   region: "Campinas e região",
